@@ -5,6 +5,9 @@ const Blog = require('./models/Blog')
 require('dotenv').config()
 var bodyParser = require('body-parser')
 app.use(bodyParser.json())
+var cors = require('cors')
+
+app.use(cors())
 
 // Connect to MongoDB
 // MongoDB connection
