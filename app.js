@@ -13,6 +13,9 @@ mongoose.connect(db, {useUnifiedTopology: true, useNewUrlParser: true})
 .then(() => console.log('Connected to MongoDB'))
 .catch(e => console.log(e.message));
 
+app.get('/', (req, res) => {
+    res.send('Hello')
+})
 
 // Fetch all blogs
 app.get('/blogs', (req, res) => {
